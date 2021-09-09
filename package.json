@@ -1,0 +1,29 @@
+{
+  "name": "links-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.4",
+    "@babel/register": "^7.15.3",
+    "@tylerhaun/custom-logger": "file:../libraries/custom-logger",
+    "@tylerhaun/express-http-errors": "^1.0.1",
+    "@tylerhaun/express-import-routes": "^1.0.1",
+    "@tylerhaun/express-sequelize-domain-model": "file:../libraries/express-sequelize-crud-controller",
+    "express": "^4.17.1",
+    "express-sequelize-domain-model": "git+https://github.com/tylerhaun/express-sequelize-domain-model",
+    "joi": "^17.4.2",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.1"
+  }
+}
