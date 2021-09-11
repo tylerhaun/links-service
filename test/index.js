@@ -1,6 +1,7 @@
 require("@babel/register");
 require("@babel/polyfill");
 const axios = require("axios");
+const assert = require("assert");
 const childProcess = require("child_process");
 const dotenv = require("dotenv");
 
@@ -74,7 +75,7 @@ describe("API", () => {
     })
   })
   describe("Link", () => {
-    it("should read 10 link clicks", async function() {
+    it("should read 1 link click", async function() {
       this.timeout(5000);
 
       const linkData = {
@@ -82,8 +83,10 @@ describe("API", () => {
         url: linkUrl,
       };
       console.log("linkData", linkData);
-      const response = await context.request.get("/link-clicks").send(linkData).expect(200);
+      const response = await context.request.get("/link-clicks?page=0&pageSize=1").send(linkData).expect(200);
       console.log("response", response.body);
+      const linkClicks = response.body;
+      assert.equal(linkClicks.length, 1)
     })
   })
 })

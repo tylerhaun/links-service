@@ -17,9 +17,12 @@
     "@tylerhaun/express-http-errors": "^1.0.1",
     "@tylerhaun/express-import-routes": "^1.0.1",
     "@tylerhaun/express-sequelize-domain-model": "file:../libraries/express-sequelize-crud-controller",
+    "assert": "^2.0.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-sequelize-domain-model": "git+https://github.com/tylerhaun/express-sequelize-domain-model",
     "joi": "^17.4.2",
+    "mysql2": "^2.3.0",
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2"
   },
