@@ -1,12 +1,16 @@
+const dotenv = require("dotenv");
+dotenv.config()
 const bodyParser = require("body-parser");
 const express = require("express");
+
 
 const { ErrorHandlerMiddleware } = require("@tylerhaun/express-http-errors");
 const importRoutes = require("@tylerhaun/express-import-routes");
 const logger = require("@tylerhaun/custom-logger");
-console.log("importRoutes", importRoutes);
 
 const db = require("./models");
+
+
 
 
 class Main {

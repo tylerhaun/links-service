@@ -23,6 +23,12 @@ module.exports = function(sequelize) {
       type: DataTypes.STRING,
     },
     headersJson: {
+      type: DataTypes.TEXT,
+    },
+    code: {
+      type: DataTypes.STRING,
+    },
+    url: {
       type: DataTypes.STRING,
     },
   }, {

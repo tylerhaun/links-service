@@ -12,8 +12,6 @@ export default class LinkController extends SequelizeCrudController {
 
   async getByCode(params, query, request, response) {
     this.logger.log({method: "getByCode", params, query})
-    console.log("request", request);
-    console.log(request.headers);
 
     const schema = Joi.object({
       params: Joi.object({
@@ -35,6 +33,8 @@ export default class LinkController extends SequelizeCrudController {
       ipAddress: request.ip,
       host: request.headers.host,
       headersJson: JSON.stringify(request.headers),
+      code: link.code,
+      url: link.url,
     };
     console.log("linkClickCreateArgs", linkClickCreateArgs);
     const linkClickController = new LinkClickController();
